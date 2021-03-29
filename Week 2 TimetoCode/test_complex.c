@@ -1,15 +1,3 @@
-/**
- * @file test_complex.c
- * @author diptiman (you@domain.com)
- * @brief 
- * @version 0.1
- * @date 2021-03-21
- * 
- * @copyright Copyright (c) 2021
- * 
- */
-
-
 #include "complex_h.h"
 #include "unity.h"
 
