@@ -11,6 +11,9 @@
 #include<stdio.h>
 #include<string.h>
 #include<stdlib.h>
+#define MAX_SIZE_USER_NAME 30
+#define MAX_SIZE_PASSWORD  20
+#define FILE_NAME  "LibraryBooksDetails.bin"
 
 #ifndef _FILE_HEADER_
 #define _FILE_HEADER_
