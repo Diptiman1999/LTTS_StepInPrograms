@@ -2,10 +2,11 @@
 
 error_t menu()
 {
+    error_t status;
     int choice = 0;
     do
     {
-        headMessage("MAIN MENU");
+        error_t head_status=headMessage("MAIN MENU");
         printf("\n\n\n\t\t\t1.Add Books");
         printf("\n\t\t\t2.Search Books");
         printf("\n\t\t\t3.View Books");
@@ -17,19 +18,19 @@ error_t menu()
         switch(choice)
         {
         case 1:
-            error_t addORNot= addBookInDataBase();
+            status= addBookInDataBase();
             break;
         case 2:
-            searchBooks();
+            status=searchBooks();
             break;
         case 3:
-            viewBooks();
+            status=viewBooks();
             break;
         case 4:
-            deleteBooks();
+            status=deleteBooks();
             break;
         case 5:
-            updateCredential();
+            status=updateCredential();
             break;
         case 0:
             printf("\n\n\n\t\t\t\tThank you!!!\n\n\n\n\n");

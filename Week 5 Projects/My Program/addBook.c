@@ -13,7 +13,7 @@ error_t addBookInDataBase()
         printf("File is not opened\n");
         error_t FILE_NOT_FOUND;
     }
-    headMessage("ADD NEW BOOKS");
+    error_t head_status=headMessage("ADD NEW BOOKS");
     printf("\n\n\t\t\tENTER YOUR DETAILS BELOW:");
     printf("\n\t\t\t---------------------------------------------------------------------------\n");
     printf("\n\t\t\tBook ID NO  = ");

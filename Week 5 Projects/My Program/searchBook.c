@@ -3,7 +3,7 @@
 
 error_t searchBooks()
 {
-    int found = 0;
+    error_t found_status = SUCCESS;
     char bookName[MAX_BOOK_NAME] = {0};
     s_BooksInfo addBookInfoInDataBase = {0};
     FILE *fp = NULL;
@@ -14,7 +14,7 @@ error_t searchBooks()
         printf("\n\t\t\tFile is not opened\n");
         return FILE_NOT_FOUND;
     }
-    headMessage("SEARCH BOOKS");
+    error_t head_status=headMessage("SEARCH BOOKS");
     //put the control on books detail
     if (fseek(fp,FILE_HEADER_SIZE,SEEK_SET) != 0)
     {
@@ -29,25 +29,26 @@ error_t searchBooks()
     {
         if(!strcmp(addBookInfoInDataBase.bookName, bookName))
         {
-            found = 1;
+            found_status = SUCCESS;
             break;
         }
     }
-    if(found)
+    if(found_status)
     {
         printf("\n\t\t\tBook id = %u\n",addBookInfoInDataBase.books_id);
         printf("\t\t\tBook name = %s",addBookInfoInDataBase.bookName);
         printf("\t\t\tBook authorName = %s",addBookInfoInDataBase.authorName);
         printf("\t\t\tBook issue date(day/month/year) =  (%d/%d/%d)",addBookInfoInDataBase.bookIssueDate.dd,
                addBookInfoInDataBase.bookIssueDate.mm, addBookInfoInDataBase.bookIssueDate.yyyy);
-        return SUCCESS;
+        //return SUCCESS;
     }
     else
     {
         printf("\n\t\t\tNo Record");
-        return FAILURE;
+        found_status= FAILURE;
     }
     fclose(fp);
     printf("\n\n\n\t\t\tPress any key to go to main menu.....");
     getchar();
+    return found_status;
 }

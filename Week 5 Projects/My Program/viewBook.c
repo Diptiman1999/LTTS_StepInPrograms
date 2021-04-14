@@ -8,7 +8,7 @@ error_t viewBooks()
     FILE *fp = NULL;
     int status = 0;
     unsigned int countBook = 1;
-    headMessage("VIEW BOOKS DETAILS");
+    error_t head_status=headMessage("VIEW BOOKS DETAILS");
     fp = fopen(FILE_NAME,"rb");
     if(fp == NULL)
     {

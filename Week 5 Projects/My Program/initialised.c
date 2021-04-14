@@ -3,12 +3,12 @@
 error_t initialise()
 {
     FILE *fp = NULL;
-    int status = 0;
+    error_t status;
     const char defaultUsername[] ="diptiman\n";
     const char defaultPassword[] ="diptiman\n";
     sFileHeader fileHeaderInfo = {0};
     status = isFileExists(FILE_NAME);
-    if(!status)
+    if(status==-1)
     {
         //create the binary file
         fp = fopen(FILE_NAME,"wb");
@@ -21,4 +21,5 @@ error_t initialise()
             fclose(fp);
         }
     }
+    return SUCCESS;
 }

@@ -11,7 +11,7 @@ error_t deleteBooks()
     FILE *fp = NULL;
     FILE *tmpFp = NULL;
     int status = 0;
-    headMessage("Delete Books Details");
+    error_t head_status=headMessage("Delete Books Details");
     fp = fopen(FILE_NAME,"rb");
     if(fp == NULL)
     {

@@ -12,6 +12,7 @@
 #include <stdio.h>
 #include <time.h>
 #include <string.h>
+#include <stdlib.h>
 
 
 #define MAX_YR  9999
@@ -137,4 +138,5 @@ error_t searchBooks();
 error_t viewBooks();
 error_t deleteBooks();
 error_t updateCredential();
+error_t login();
 #endif
