@@ -35,7 +35,7 @@ error_t viewBooks()
     fclose(fp);
     if(!found)
     {
-        printf("\n\t\t\tNo Record");
+        printf("\n\t\t\tNo Record\n");
         return FAILURE;
     }
     printf("\n\n\t\t\tPress any key to go to main menu.....");

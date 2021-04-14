@@ -31,6 +31,16 @@
 #ifndef _LIBRARY_HEADER_
 #define _LIBRARY_HEADER_
 
+#ifdef _WIN32
+    #define CLS "cls"
+#elif __linux__
+    #define CLS "clear"
+#endif
+
+
+
+
+
 /**
  * @brief For error Handling
  * 
@@ -93,7 +103,7 @@ error_t initialise();
  * @param path 
  * @return error_t 
  */
-error_t isFileExist(const char *path);
+error_t isFileExists(const char *path);
 
 
 /**
