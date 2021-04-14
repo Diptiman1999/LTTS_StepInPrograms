@@ -38,8 +38,8 @@ error_t login()
     {
         error_t head_status=headMessage("Login Failed");
         printf("\t\t\t\tSorry,Unknown User.");
-        getch();
-        system("cls");
+        getchar();
+        system(CLS);
         return FAILURE;
     }
     return login_status;

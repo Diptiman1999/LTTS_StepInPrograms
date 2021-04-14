@@ -14,7 +14,7 @@ error_t welcomeMessage()
     printf("\n\t\t\t        =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=");
     printf("\n\t\t\t  **-**-**-**-**-**-**-**-**-**-**-**-**-**-**-**-**-**-**\n");
     printf("\n\n\n\t\t\t Enter any key to continue.....");
-    getch();
+    getchar();
 
     return SUCCESS;
 }

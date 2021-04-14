@@ -31,7 +31,7 @@ error_t updateCredential(void)
     fwrite(&fileHeaderInfo,FILE_HEADER_SIZE, 1, fp);
     fclose(fp);
     printf("\n\t\t\tYour Password has been changed successfully");
-    printf("\n\t\t\ttLogin Again:");
+    printf("\n\t\t\tLogin Again:");
     fflush(stdin);
     getchar();
     return SUCCESS;
